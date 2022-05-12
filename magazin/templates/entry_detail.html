@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+<div class="entry-view">
+    <table>
+        <tr><td class="span-image blur-image" ><img class="blur-image" src="{% static produs.poza.url %}" /></td></tr>
+        <tr><td>{{produs.nume}} {{produs.marca}}</td></tr>
+        <tr><td> Nume:</td> <td>{{produs.nume}} </td></tr>
+        <tr><td> Marca:</td> <td>{{produs.marca}}</td> </tr>
+
+        {%if produs.stoc != 0 %}
+             <tr><td> Stoc:</td> <td>{{produs.stoc}}</td> </tr>
+        {% else %}
+             <tr><td> Stoc:</td><td> Produsul nu mai e pe stoc. Va rugam sa ne contactati!</td> </tr>
+        {% endif %}
+
+        <tr><td> Detalii:</td> <td>{{produs.descriere}}</td></tr>
+        <tr><td> Tip Produs:</td> <td>{{produs.tip}}</td></tr>
+        <tr><td> Pret:</td> <td>{{produs.pret|cut:".0"}}</td></tr>
+        <tr><td><button onclick="window.location.href = '{% url 'adauga_cos' produs.id%}';">Adauga in cos</button></td></tr>
+
+    </table>
+</div>
+{% endblock content %}

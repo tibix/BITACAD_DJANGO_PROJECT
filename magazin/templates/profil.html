@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<table class="produse-cos">
+<form method="post" id="profil">
+    {% csrf_token %}
+    {{ form.as_table }}
+</form>
+</table>
+<button type="submit" form="profil">Salveaza</button>
+{% endblock %}

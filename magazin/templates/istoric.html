@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+{% load static %}
+ {% block content %}
+<h3> Lista de produse din {{titlu}} </h3>
+<ul>
+  {% if produse %}
+      {% for produs in produse %}
+           <li class="produse-cos">
+                 <a class="produse-cos-scris" href ="{% url 'entry' produs.id %}">
+                     <img src="{% static produs.poza.url %}" />
+                     <div>Nume: {{produs.nume}}</div>
+                     <div>Marca: {{produs.marca}}</div>
+                     <div>Numar: {{produs.numar}}</div>
+                     <div>Pret: {{produs.pret_achizitie}}</div>
+                     <div>Data: {{produs.data}}</div>
+                     <div>Finalizat: {{produs.finalizat}}</div>
+                 </a>
+           </li>
+      {% endfor %}
+  {% else %}
+    <li>Nu aveti produse comandate</li>
+  {% endif %}
+</ul>
+{% endblock content %}

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>FancyShop</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<h1 class="head">🍃</h1>
+    <table class="user">
+        <tr>
+<td class="user">            <ul class="cos">
+                <li class="cos"><a class="cos" href="{% url 'cos' %}">Produse in cos: {{ cos }} </a>
+                    <br>
+                    <a class="cos" href="{% url 'istoric' %}">Istoric</a></li> </ul></td>
+            <td class="user"><ul>
+            {% if username %}
+                <li class="login"><a class="login" href="{% url 'profil' %}">Bine ai venit {{username}}</a>,  <a class="login" href="/logout/">logout</a> </li>
+            {% else %}
+                <li class="login"> <a class='login' href="{% url 'login' %}">Logheaza-te!</a> </li>
+            {% endif %}
+            </ul></td>
+        </tr>
+    </table>
+
+    <div id="tabs">
+        <ul>
+          <li><a  href="/">Acasa</a></li>
+          <li><a  href="/contact/">Contact</a></li>
+        </ul>
+    </div>
+    {% block content%}
+    {% endblock content %}
+<script src="{%static 'main.js' %}"></script>
+</body>
+</html>

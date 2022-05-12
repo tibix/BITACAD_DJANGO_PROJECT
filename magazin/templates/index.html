@@ -1,0 +1,18 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+<h2> Lista de produse </h2>
+  {% for produs in produse %}
+       <div class="list-view">
+           <div class="item">
+               <table >
+                   <tr><td class="blur-image">
+                       <a href ="{% url 'entry' produs.id %}"><img class="blur-image" src="{% static produs.poza.url %}" /> </a></td></tr>
+                   <tr><td><a class="produse" href ="{% url 'entry' produs.id %}">{{produs.nume}} {{ produs.marca}}</a>
+
+               </table>
+            </div>
+       </div>
+  {% endfor %}
+{% endblock content %}

@@ -1,0 +1,256 @@
+body {
+	font: bold 14px/2.5em Verdana;
+	background: url(fundal.jpg) ;
+  	background-size: auto;
+    	background-color: #cccccc;
+	text-align:center;
+    margin: auto;
+	opacity: 1;
+	color: white;
+
+}
+
+img#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;}
+
+h3 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	}	
+	
+hr {
+	border:none;
+	border-top:4px solid #CCCCCC;
+	height:4px;
+	margin-bottom:25px;
+	}
+
+ul {
+    list-style-type: none;
+}
+
+p { text-align: left-side;
+    text-decoration: none;
+    color: white;
+	font-size:30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+	font-size:30px;
+}
+
+
+
+a:hover {
+    //background-color: yellow;
+	color: green;
+	opacity: .8;
+}
+
+
+
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+li a:active {
+    background-color: #4CAF50;
+}
+	
+button {
+	background-color: green;
+	color: white;
+}
+
+#tabs ul {
+    margin: 0 2% 0 3%;
+    list-style-type: none;
+    text-align:center;
+    border: 1px solid #555;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: block
+}
+
+#tabs li {
+    float: left;
+	border-right: 1px solid #bbb;
+}
+
+#tabs li:active {
+    background-color: #4CAF50;
+}
+
+#tabs  li:selected   {
+    background-color: green;
+}
+
+
+#tabs li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {float:none;}
+
+/* End IE5-Mac hack */
+#tabs a:hover span {
+	color:green;
+}
+
+#tabs a:hover span {
+	color:green;
+}
+.head {
+background: url(header.gif) ;
+  	background-size: auto;
+  	padding-top: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:48px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+line-height:330px;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+width:500px;
+float:left;
+
+  	}
+h1 {
+padding-top: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+line-height:100px;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+width:310px;
+float:left;
+}
+
+.login {
+  text-align: right;
+  vertical-align: middle;
+  color: white;
+  opacity: .8;
+  margin: 30;
+  padding:30;
+  font-size:12px;
+}
+.login:hover {
+	color: green;
+	opacity: .8;
+}
+
+.user {
+    width:98%;
+}
+
+
+.logout {
+  text-align: right;
+  color: green;
+  opacity: .8;
+  font-size:12px;
+  : top
+}
+
+.logout:hover {
+    //background-color: yellow;
+	color: green;
+	opacity: .8;
+}
+
+.cos {
+  text-align: left;
+  display: inline-block
+  color: white;
+  opacity: .8;
+  font-size:12px;
+}
+
+.produse-cos {
+  text-align: left;
+  display: inline-block
+  color: white;
+  opacity: .8;
+  font-size: 14px;
+  margin: 1%;
+  padding: 0% 0% 2% 40%;
+}
+.produse-cos-scris {
+font-size:16px;
+span: 215px;
+}
+
+.cos:ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+
+.cos:hover {
+	color: green;
+	opacity: .8;
+}
+
+.blur-image {
+-webkit-box-shadow: inset 8px 16px 44px 10px rgba(250,250,250,1);
+-moz-box-shadow: inset 8px 16px 44px 10px rgba(250,250,250,1);
+box-shadow: inset 8px 16px 44px 10px rgba(250,250,250,1);
+}
+
+.produse {
+	display: inline-block;
+	margin: auto;
+  color: white;
+  opacity: .8;
+  font-size:12px;
+  text-align: center;
+  display: block;
+  width:210px;
+  margin-right: auto;
+}
+
+.list-view {
+  width: 25%;
+  margin: 2% 5%;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+}
+
+.span-image.blur-image{
+     column-span: all;
+}
+
+.entry-view {
+width: 25%;
+  margin: 2% 5%;
+  display: inline-grid;
+  text-align:left;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+}
+
+.item {
+  padding: 2% 2% 2% 2%;
+}

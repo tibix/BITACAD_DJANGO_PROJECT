@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+{% load static %}
+ {% block content %}
+<h3> Lista de produse din {{titlu}} </h3>
+<ul>
+    {% if produse %}
+      {% for produs in produse %}
+           <li class="produse-cos">
+                 <a class="produse-cos-scris" href ="{% url 'entry' produs.id %}">
+                     <img src="{% static produs.poza.url %}" />
+                     <div>Nume: {{produs.nume}}</div>
+                     <div>Numar: {{produs.numar}}</div>
+                     <div>Pret: {{produs.pret}}</div>
+                 </a>
+           </li>
+      {% endfor %}
+   {% else %}
+    <li>Nu aveti produse in cos</li>
+  {% endif %}
+</ul>
+{% if produse %}
+    <button><a href ="{% url 'comanda' %}">Comanda</a></button>
+{% endif %}
+{% endblock content %}
